@@ -5,13 +5,9 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  template: `
-    <h1>Welcome to {{title}}!</h1>
-
-    <router-outlet />
-  `,
+  template: `<h1>Welcome to {{pokemons[1]}}</h1>`,
   styles: [],
 })
 export class AppComponent {
-  title = 'ng-pokemon-app';
+  pokemons = ['Bulbizarre', 'Salamèche', 'Carapuce'];
 }
