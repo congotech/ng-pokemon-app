@@ -2,12 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { POKEMONS } from './mock-pokemon-list';
 import { Pokemon } from './pokemon';
-import { NgFor, NgIf } from '@angular/common';
+import { DatePipe, NgFor, NgIf, UpperCasePipe } from '@angular/common';
+import { BorderCardDirective } from './border-card.directive';
+import { PokemonTypeColorPipe } from './pokemeon-type-color.pipe';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgIf, NgFor],
+  imports: [RouterOutlet, NgIf, NgFor, 
+    BorderCardDirective, DatePipe, 
+    UpperCasePipe, PokemonTypeColorPipe
+  ],
   templateUrl:'app.component.html',
   styles: [],
 })
